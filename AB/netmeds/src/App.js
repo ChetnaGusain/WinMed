@@ -1,3 +1,5 @@
+import AllRoutes from "./components/AllRoutes";
+import Navbar from "./components/Navbar";
 import SignUp from "./Pages/SignUp";
 
 function App() {
@@ -5,7 +7,9 @@ function App() {
 
   return (
     <div>
-     <SignUp/>
+     {/* <SignUp/> */}
+    
+      <AllRoutes/>
     </div>
   );
 }
