@@ -1,7 +1,15 @@
-import { Box, Input } from '@chakra-ui/react'
-import React from 'react'
+import { Box, Input,Text } from '@chakra-ui/react'
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import styled  from 'styled-components'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleUser,
+  faCartShopping,
+  // faCaretDown,
+  // faCaretUp,
+} from "@fortawesome/free-solid-svg-icons";
 
 
 export const Nav = styled.div`
@@ -9,10 +17,9 @@ height: 100px ;
 width: 100% ;
 background: #24AEB1 ;
 display: flex ;
-gap: 40px ;
-padding:20px ;
+gap: 30px ;
+padding:10px ;
 padding-top:22px;
-
 top:0;
 
 `
@@ -27,7 +34,32 @@ padding-Top:3px;
 border-radius: 7px
 
 `
+
 const Navbar = () => {
+
+  
+   
+
+  const auth = useSelector((state)=>state.isAuth.isAuth) ;
+  console.log(auth)
+
+  if(auth)
+  {
+    var userData = JSON.parse(localStorage.getItem("USERDATA")) ;
+    var firstName = userData.firstName
+  }
+
+
+  useEffect(()=>{
+    if(auth)
+    {
+      JSON.parse(localStorage.getItem("USERDATA")) ;
+    }
+  
+      
+  },[auth])
+
+
   return (
     <>
       <Nav >
@@ -38,26 +70,26 @@ const Navbar = () => {
             </SearchDiv>
         
           <Link to='/upload'> 
-          <Box color={'white'} pt={3}>
-              <img src='' alt=''/>
+          <Box display={'flex'} color={'white'} pt={3}>
+              <img src='https://www.netmeds.com/assets/gloryweb/images/icons/upload_rx.svg' alt=''/>
               <b>Upload</b>
           </Box>
           </Link>
 
           <Link to='/cart'> 
-          <Box color={'white'} pt={3}>
-              <img src='' alt=''/>
-              <b>Cart</b>
+          <Box display={'flex'} color={'white'} pr={2} pt={4}>
+            <FontAwesomeIcon icon={faCartShopping} style={{width:"25px",height:"17px"}}/>
+            <b style={{ marginLeft:"0px"}}>Cart</b>
           </Box>
-            
           </Link>
 
-          <Link to='/signUp'> 
-          <Box color={'white'} pt={3}>
-              <img src='' alt=''/>
-              <b>Sign in/Sign up</b>
+         
+          <Box display={'flex'} width={180} color={'white'}pr={35} pt={3}>
+          <FontAwesomeIcon icon={faCircleUser} style={{width:"25px",height:"20px",marginTop:"4px"}} />
+              {auth ?  <Link to='/signIn'> <b style={{marginLeft:"6px"}}>{auth ? firstName : ""}</b>  </Link>
+                    :  <Link style={{width:"160px"}} to='/signUp'> <b style={{marginLeft:"4px"}}>Sign In/Sign Up</b> </Link>} 
           </Box>
-          </Link>
+         
 
       </Nav>
     </>

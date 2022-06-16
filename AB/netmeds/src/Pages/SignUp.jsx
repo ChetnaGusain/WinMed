@@ -13,9 +13,13 @@ import {
     Text,
   } from '@chakra-ui/react';
   import { useNavigate } from "react-router-dom";
+import { useDispatch} from "react-redux";
+import { login } from "../Redux/actions";
+import Navbar from "../components/Navbar";
 
 
   export default function SignUp() {
+
     const [flag,setFlag] = React.useState(false);
     const [number,setNumber] = React.useState("")
     const [name,setName] = React.useState("") ;
@@ -27,22 +31,24 @@ import {
     const [otp4, setOtp4] = React.useState("");
     const [otp5, setOtp5] = React.useState("");
     const [otp6, setOtp6] = React.useState("");
-
     const navigate = useNavigate() ;
+
+    // const auth = useSelector((state)=>state.isAuth.isAuth)
+
+    const dispatch = useDispatch() ;
 
    
 
     const handleOTP =()=>{
-
         setFlag(true)
-
     }
 
     console.log(email)
     let customerData = {
       email : email,
       firstName : name,
-      lastName : lastName
+      lastName : lastName,
+      mobile: number
     }
 
     const handleVerify =()=>{
@@ -51,13 +57,16 @@ import {
       {
         if( otp1==="1" && otp2==="2" && otp3==="3" && otp4==="4" && otp5==="5" && otp6==="6")
         {
-  
+          
           localStorage.setItem("USERDATA",JSON.stringify(customerData))
+          dispatch(login())
           alert("Verification Successful...!!")
-          navigate('/home')
+          navigate('/')
+
+        
         }
         else{
-            alert("Failed,try again")
+            alert("FAILED >>>>> USE OTP 123456")
         }
   
       }
@@ -73,6 +82,7 @@ import {
     // handleChange = (otp) => this.setState({ otp });
     return (
         <>
+        <Navbar/>
 
         <Box m={50} rounded={20} p={20} pl={0} boxShadow="rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px" display="flex" gap={100}>
 
@@ -196,14 +206,6 @@ import {
     </>
                           
   }     
-    
-
-
-
-
-
-
-
 
         </Box>
        

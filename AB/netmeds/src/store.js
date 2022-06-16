@@ -1,29 +1,15 @@
-// import { applyMiddleware, combineReducers, compose, legacy_createStore } from 'redux'
-// import  { AuthReducer } from './reducer'
 
+import { applyMiddleware, combineReducers, compose, legacy_createStore } from 'redux'
+import thunk from 'redux-thunk'
+import { AuthReducer } from './Redux/reducer'
 
-// const rootReducer = combineReducers({isAuth : AuthReducer})
+let rootReducer = combineReducers({isAuth:AuthReducer})
 
-// const Thunk = (store)=> (next)=> (action)=> {
-//     console.log("type of action")
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-//     if(typeof action ==="function"){
-//         return action(store.dispatch)
-//     }
-//     next(action)
-// }
+const store = legacy_createStore(
+    rootReducer,
+    composeEnhancers(applyMiddleware(thunk))
+)
 
-// const composeEnhancers =
-//   typeof window === 'object' &&
-//   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-//       // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
-//     }) : compose;
-
-//     const enhancer = composeEnhancers(
-//         applyMiddleware(Thunk),
-//         // other store enhancers if any
-//       );
-
-// const store = legacy_createStore(rootReducer,enhancer)
-
-// export default store
+export default store
