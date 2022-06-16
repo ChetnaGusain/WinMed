@@ -115,16 +115,21 @@ const Footer = () => {
             </ButtonAro>
             <hr />
             <div style={{ display: "flex", marginTop: "10px" }}>
+              <a href='https://play.google.com/store/apps/details?id=com.NetmedsMarketplace.Netmeds&hl=en'  target='_blank'>
               <img
                 style={{ width: "130px", height: "35px" }}
                 src="https://www.netmeds.com/assets/gloryweb/images/icons/play_store.png"
                 alt="gPlay"
               />
+              </a>
+              <a href="https://apps.apple.com/in/app/netmeds-india-ki-pharmacy/id1011070011"  target='_blank'>
               <img
                 style={{ width: "130px", height: "35px", marginLeft: "15px" }}
                 src="https://www.netmeds.com/assets/gloryweb/images/icons/app_store.png"
                 alt="app store"
               />
+              </a>
+             
             </div>
           </FooterSub>
         </FooterContainer>

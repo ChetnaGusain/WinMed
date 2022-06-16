@@ -165,7 +165,7 @@ const Home = () => {
         <Box rounded={15} pt={5} ml={4} height={500}  background='white'>
         <Box  background='white'pl={10}>
             <Text fontSize='sm' color={'#6F7284'}> TODAY'S EXCLUSIVE </Text>
-           <Text fontSize='xl' fontWeight={500}> Lightning Deals</Text>
+            <Text fontSize='xl' fontWeight={500}>  Lightning Deals</Text>
             <Text fontSize='xs' color={'#6F7284'} >Grab Before The Deal Ends</Text>
         </Box>
         <LightningDeals/>

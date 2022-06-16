@@ -2,13 +2,16 @@
 
  import { Box, Button } from "@chakra-ui/react";
 import axios from "axios";
-import React from "react";
+import React, { useEffect } from "react";
  import {useState} from "react";
+import { useDispatch } from "react-redux";
+import { cartData } from "../Redux/actions";
  
  // keep the add to cart component here
  const AddCart =(mydata) => {
     const [flag,setFlag] = useState(false)
     const [count,setCount] = React.useState(1)
+    const dispatch = useDispatch()
 
      const handleIncrement = (value)=>
      {
@@ -24,8 +27,8 @@ import React from "react";
       // console.log(finallyPost)
       const handleSave= async (mydata)=>
       {
-            console.log(mydata,"ab")
-        var finallyPost = {
+          console.log(mydata,"ab")
+          var finallyPost = {
           id :mydata.prodData.id,
           imageUrl : mydata.prodData.imageUrl,
           title : mydata.prodData.title,
@@ -35,9 +38,11 @@ import React from "react";
           strikeOfPrice : mydata.prodData.strikeOfPrice,
           qty : mydata.prodData.qty
         }
-        setFlag(true)
         axios.post('http://localhost:3000/cart',finallyPost)
         alert("Item Added to the Cart")
+        setFlag(true)
+
+        dispatch(cartData())
       }
 
    return <>

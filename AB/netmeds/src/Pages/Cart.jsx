@@ -113,7 +113,7 @@ const Cart = () => {
             
             <Box key={el.id}  fontSize={'sm'} display={'flex'} height={190} lineHeight={6} borderBottom={'1px solid grey'} p={3} >
             <Box>
-                <Image height={38} mr={2} src={el.imageUrl} alt=''/>
+                <Image height={42} mr={10} src={el.imageUrl} alt=''/>
             </Box>
             <Box>
             <Text fontSize={'md'} fontWeight={500}>{el.title}</Text>

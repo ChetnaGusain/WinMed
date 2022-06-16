@@ -23,7 +23,9 @@ display: flex ;
 gap: 30px ;
 padding:10px ;
 padding-top:22px;
-top:0;
+${'' /* position:fixed;
+overflow:hidden;
+top:0; */}
 `
 export const SearchDiv = styled.div`
 height:52px;
@@ -52,6 +54,7 @@ const Navbar = () => {
   {
     var userData = JSON.parse(localStorage.getItem("USERDATA")) ;
     var firstName = userData.firstName
+   
   }
 
 
@@ -85,8 +88,8 @@ const Navbar = () => {
 
           <Link to='/cart'> 
           <Box display={'flex'} color={'white'} pr={2} pt={4}>
+            <Box bg={'#F757A4'} ml={6} mt={-2} mr={-9} width={5} textAlign={'center'} height={4} fontSize={'x-small'} rounded={'md'}>{count}</Box>
             <FontAwesomeIcon  icon={faCartShopping} style={{width:"25px",height:"17px"}}/>
-            <Box bg={'#F757A4'} ml={8} mt={0} mr={-12} width={5} textAlign={'center'} height={4} fontSize={'x-small'} rounded={'md'}>{count}</Box>
             <b style={{ marginLeft:"3px"}}>Cart</b>
           </Box>
           </Link>

@@ -2842,23 +2842,14 @@
   ],
   "cart": [
     {
-      "id": 141,
-      "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/15917/dabur_pudin_hara_pearls_capsule_10_s_0.jpg",
-      "title": "Dabur Pudin Hara Pearls Capsule 10's",
-      "seller": "Mkt: Dabur India Ltd",
-      "brand": "Dabur",
-      "salePrice": 19,
-      "strikeOfPrice": 20,
-      "qty": "4"
-    },
-    {
-      "id": 206,
-      "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/405945/patanjali_kesh_kanti_hair_cleanser_anti_dandruff_200_ml_0_1.jpg",
-      "title": "Patanjali Kesh Kanti Hair Cleanser",
-      "seller": "Patanjali Ayurved Ltd",
-      "brand": "Patanjali",
-      "salePrice": 110,
-      "qty": "1"
+      "id": 182,
+      "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/328123/revital_h_capsule_30_s_0.jpg",
+      "title": "Revital H Capsule 30'S",
+      "seller": "Mkt: Sun Pharmaceutical Industries Ltd",
+      "brand": "Revital",
+      "salePrice": 263.5,
+      "strikeOfPrice": 310,
+      "qty": 1
     }
   ],
   "categoryInFocus": [

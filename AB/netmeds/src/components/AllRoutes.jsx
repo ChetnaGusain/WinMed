@@ -12,6 +12,7 @@ import SignUp from '../Pages/SignUp'
 import Success from '../Pages/Success'
 import Upload from '../Pages/Upload'
 import Wellness from '../Pages/Wellness'
+import PrivateAuth from './PrivateAuth'
 
 
 const AllRoutes = () => {
@@ -30,8 +31,18 @@ const AllRoutes = () => {
          <Route path='/labtest' element={<LabTest></LabTest>} />
          <Route path='/beauty' element={<Beauty></Beauty>} /> 
          <Route path='/cart' element={<Cart></Cart>}></Route>
-         <Route path='/checkout/payment-information' element={<Payment></Payment>} /> 
-         <Route path='/success' element={<Success></Success>} /> 
+
+         <Route path='/checkout/payment-information' element={
+         <PrivateAuth>
+                <Payment></Payment>
+         </PrivateAuth>} 
+         /> 
+
+         <Route path='/success' element={
+          <PrivateAuth>
+              <Success></Success>
+          </PrivateAuth>
+         } /> 
     </Routes>
 
     {/* <Footer/> */}
