@@ -1,5 +1,8 @@
 import axios from "axios"
-import { ADD_TO_CART_SUCCESS, BESTSELLER_SUCCESS, COVIDESSENTIALS_SUCCESS, FETCHFILTERDATA, LOGIN_SUCCESS, LOGOUT_SUCCESS,NEWONNETMEDS_SUCCESS,SUPP_SUCCESS, } from "./actionTypes"
+import {  BESTSELLER_SUCCESS, CART_SUCCESS, COVIDESSENTIALS_SUCCESS, FETCHFILTERDATA, LOGIN_SUCCESS, LOGOUT_SUCCESS,NEWONNETMEDS_SUCCESS,SUPP_SUCCESS, } from "./actionTypes"
+
+
+
 
 
 export const login =()=>({
@@ -38,10 +41,12 @@ export const fetchFilterData=(data)=>({
     payload:data
 })
 
-export const addToCart=(data)=>({
-    type: ADD_TO_CART_SUCCESS,
+export const takeMeToCart=(data)=>({
+    type: CART_SUCCESS,
     payload:data
 })
+
+
 
 
 
@@ -120,7 +125,7 @@ export const fetchBestSeller = (payload) => async(dispatch)=>{
     .then((res)=>{
         console.log(res.data) ;
         let success = bestSellerSuccess(res.data) ;
-        alert("success")
+        // alert("success")
         dispatch(success)
     })
     .catch((e)=>{
@@ -129,9 +134,7 @@ export const fetchBestSeller = (payload) => async(dispatch)=>{
 }
 
 export const fetchData =(payload,page,q,costOrder)=>{
-
     return (dispatch)=>{
-    
      axios("http://localhost:3000/data",{
         params: {
              ...payload,
@@ -140,32 +143,32 @@ export const fetchData =(payload,page,q,costOrder)=>{
              q: q,
             _sort: "salePrice",
             _order:`${costOrder}`,
-        },
-       
-    }
-)
+        }})
     .then((r)=>{
         dispatch(fetchFilterData(r.data))
-        console.log(r.data)
+        // console.log(r.data)
     })
     .catch((e)=> console.log(e))
   };
 };
 
+export const cartData =(payload)=> (dispatch)=>{
 
-export const postToCart =(dispatch,data)=>{
-        console.log(data)
-    axios.post('http://localhost:3000/cart',data)
+    axios('http://localhost:3000/cart')
     .then((res)=>{
-        alert('post success')
-       
+        console.log(res.data) ;
+        let cartAction = takeMeToCart(res.data) ;
+        dispatch(cartAction)
+        // alert('cart success')
     })
     .catch((e)=>{
-        alert('post failed')
         console.log(e)
     })
-
 }
+
+
+
+
 
 
 

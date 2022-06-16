@@ -1,4 +1,4 @@
-import { LOGIN_SUCCESS, LOGOUT_SUCCESS, SUPLLEMENTS_REQUEST,SUPLLEMENTS_SUCCESS,SUPLLEMENTS_FAILURE, SUPP_REQ, SUPP_SUCCESS, SUPP_FAILURE, NEWONNETMEDS_SUCCESS, COVIDESSENTIALS_SUCCESS, BESTSELLER_SUCCESS, FETCHFILTERDATA, ADD_TO_CART_SUCCESS } from "./actionTypes"
+import { LOGIN_SUCCESS, LOGOUT_SUCCESS, SUPLLEMENTS_REQUEST,SUPLLEMENTS_SUCCESS,SUPLLEMENTS_FAILURE, SUPP_REQ, SUPP_SUCCESS, SUPP_FAILURE, NEWONNETMEDS_SUCCESS, COVIDESSENTIALS_SUCCESS, BESTSELLER_SUCCESS, FETCHFILTERDATA, ADD_TO_CART_SUCCESS, CART_SUCCESS } from "./actionTypes"
 
 
 export const initState = {
@@ -9,8 +9,6 @@ export const initState = {
     bestSeller: [] ,
     filteredData: [],
     cart: [],
-
-
 }
 
 export const AuthReducer = (state=initState,action)=>{
@@ -22,7 +20,7 @@ export const AuthReducer = (state=initState,action)=>{
                 isAuth: true ,
             }
         }
-
+        
         case LOGOUT_SUCCESS :{
             return {
                 ...state,
@@ -66,12 +64,13 @@ export const AuthReducer = (state=initState,action)=>{
 
         }
 
-        case ADD_TO_CART_SUCCESS :{
+        case CART_SUCCESS :{
             return {
                 ...state,
                 cart:action.payload 
             }
         }
+
 
         default: {
             return state

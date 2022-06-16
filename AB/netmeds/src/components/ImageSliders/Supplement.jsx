@@ -109,7 +109,7 @@ export default function Supplement() {
             <span style={{color:"#EF4281"}}>{url.salePrice}</span><br></br>
             <span style={{color:"#6F7284"}}>MRP : </span>
             <Text color={'#717486'} as='s'>Rs.{url.strikeOfPrice}</Text>
-            <AddCart/>
+            <AddCart  key={url.id} prodData={url}/>
           </Box>
            
           </Box>

@@ -20,7 +20,7 @@ const FilterCategories = () => {
 
     const dispatch = useDispatch()
     const [searchParams,setSearchParams] = useSearchParams() ;
-    console.log(searchParams.getAll("type"))
+    // console.log(searchParams.getAll("type"))
 
     const [categoryValues,setCategoryValues] = useState(searchParams.getAll('type') || []) ;
 

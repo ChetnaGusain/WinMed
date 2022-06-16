@@ -6,7 +6,6 @@ const Upload = () => {
     <>
     <Navbar/>
     <div>Upload</div>
-
 </>
   )
 }

@@ -20,7 +20,7 @@ const ProductsByFilter = () => {
   const filteredData = useSelector((state)=>state.isAuth.filteredData)
 
   const length = filteredData.length
-  console.log(filteredData)
+  // console.log(filteredData)
 
   const dispatch = useDispatch()
 
@@ -33,6 +33,9 @@ const ProductsByFilter = () => {
       dispatch(fetchData(params,page,q,costOrder))
 
   },[page,q,costOrder])
+
+
+  
 
   // console.log(products)
  
@@ -61,15 +64,19 @@ const ProductsByFilter = () => {
 
               {filteredData.map((product) => {
                 return (
-                  <ProductSimple
-                  id={product.id}
-                  image={product.imageUrl}
-                  title={product.title}
-                  seller={product.seller}
-                  brand={product.brand}
-                  salePrice={product.salePrice}
-                  strikeOfPrice={product.strikeOfPrice}
+                  <>
+                  <ProductSimple key={product.id}
+                    id={product.id}
+                    image={product.imageUrl}
+                    title={product.title}
+                    seller={product.seller}
+                    brand={product.brand}
+                    salePrice={product.salePrice}
+                    strikeOfPrice={product.strikeOfPrice}
+                    daata = {product}
                   />
+                  
+                   </>
                 )
               })}
               </Flex>
@@ -86,13 +93,13 @@ const ProductsByFilter = () => {
   )
 }
 
- function ProductSimple({id,image,salePrice,strikeOfPrice,title,brand,seller}) {
- 
+ function ProductSimple({id,image,salePrice,strikeOfPrice,title,brand,seller,daata}) {
+
   return (
     <>
     {/* boxShadow={' rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'} */}
     
-    <Box  fontSize='sm' border={'1px solid grey'} rounded={10} p={4} pt={1}  m={4}  bg={'white'}  width={212} height={356}>
+    <Box key={id} fontSize='sm' border={'1px solid grey'} rounded={10} p={4} pt={1}  m={4}  bg={'white'}  width={212} height={356}>
     {/* <Button bg={'#84BE52'} fontSize='smaller' p={1} color={'white'} size='xxs'>{url.off}</Button> */}
     <Box height={290} >
     <img style={{paddingLeft:"14px",paddingTop:"2px"}} src={image} alt=''/>
@@ -106,9 +113,9 @@ const ProductsByFilter = () => {
       {/* <Link to={`/covidEssentials/productPage/${id}`}>SEE MORE</Link> */}
     </Box>
    
-      <Box pt={0}height={100} >
-        {/* <Link to={`/covidEssentials/productPage/${id}`} > */}
-        <AddCart id={id}/>
+      <Box  pt={0}height={100} >
+       
+          <AddCart key={id} prodData={daata} />
         {/* </Link> */}
       </Box>
    

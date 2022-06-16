@@ -5,9 +5,11 @@ import Cart from '../Pages/Cart'
 import CovidEssentialsPage from '../Pages/CovidEssentialsPage'
 import Home from '../Pages/Home'
 import LabTest from '../Pages/LabTest'
+import Payment from '../Pages/Payment'
 import ProductPage from '../Pages/ProductPage'
 import SignIn from '../Pages/SignIn'
 import SignUp from '../Pages/SignUp'
+import Success from '../Pages/Success'
 import Upload from '../Pages/Upload'
 import Wellness from '../Pages/Wellness'
 
@@ -20,7 +22,6 @@ const AllRoutes = () => {
     <Routes>
          <Route path='/' element={<Home></Home>} />
          <Route path='/upload' element={<Upload></Upload>} />
-     
          <Route path='/signUp' element={<SignUp></SignUp>} />
          <Route path='/signIn' element={<SignIn></SignIn>} />
          <Route path='/wellness' element={<Wellness></Wellness>} />
@@ -28,8 +29,9 @@ const AllRoutes = () => {
          <Route path='/covidEssentials/productPage/:id' element={<ProductPage></ProductPage>} />
          <Route path='/labtest' element={<LabTest></LabTest>} />
          <Route path='/beauty' element={<Beauty></Beauty>} /> 
-
          <Route path='/cart' element={<Cart></Cart>}></Route>
+         <Route path='/checkout/payment-information' element={<Payment></Payment>} /> 
+         <Route path='/success' element={<Success></Success>} /> 
     </Routes>
 
     {/* <Footer/> */}

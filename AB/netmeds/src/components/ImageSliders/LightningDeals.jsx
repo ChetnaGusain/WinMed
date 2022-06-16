@@ -163,7 +163,7 @@ export default function LightningDeals() {
       </IconButton>
       {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
-        {cards.map((url,id,index) => (
+        {cards.map((url,index) => (
           <Box
             marginTop={8}
             key={index}
@@ -183,7 +183,7 @@ export default function LightningDeals() {
             <span style={{color:"#EF4281"}}>{url.price}</span><br></br>
             <span style={{color:"#6F7284"}}>MRP : </span>
             <Text color={'#717486'} as='s'>{url.mrp}</Text>
-            <AddCart/>
+            <AddCart key={url.id} prodData={url}/>
           </Box>
            
           </Box>

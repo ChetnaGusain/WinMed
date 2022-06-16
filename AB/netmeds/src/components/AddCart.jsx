@@ -4,22 +4,12 @@
 import axios from "axios";
 import React from "react";
  import {useState} from "react";
-import { useDispatch } from "react-redux";
-import ProductPage from "../Pages/ProductPage";
-import { postToCart } from "../Redux/actions";
- 
  
  // keep the add to cart component here
- const AddCart =(id) => {
-
-  console.log(id)
+ const AddCart =(mydata) => {
     const [flag,setFlag] = useState(false)
-    const [data,setData] =useState(null)
-    const dispatch = useDispatch()
- 
-   const [count,setCount] = React.useState(1)
-     //manage state of the count 
- 
+    const [count,setCount] = React.useState(1)
+
      const handleIncrement = (value)=>
      {
          setCount(count+value)
@@ -31,27 +21,25 @@ import { postToCart } from "../Redux/actions";
            ? setCount(count-value)
            : setFlag(false)
      }
+      // console.log(finallyPost)
+      const handleSave= async (mydata)=>
+      {
+            console.log(mydata,"ab")
+        var finallyPost = {
+          id :mydata.prodData.id,
+          imageUrl : mydata.prodData.imageUrl,
+          title : mydata.prodData.title,
+          seller : mydata.prodData.seller,
+          brand : mydata.prodData.brand,
+          salePrice : mydata.prodData.salePrice,
+          strikeOfPrice : mydata.prodData.strikeOfPrice,
+          qty : mydata.prodData.qty
+        }
+        setFlag(true)
+        axios.post('http://localhost:3000/cart',finallyPost)
+        alert("Item Added to the Cart")
+      }
 
-     const handleButton =(id)=>{
-
-      console.log(id,"ab")
-      setFlag(true)   
-      axios({
-        url: `http://localhost:3000/data/1`,
-        method: 'GET',
-    })
-    .then(res=>{
-        setData(res.data)
-        console.log(data)
-        dispatch(postToCart(data))
-    })
-    .catch(e=>{
-        console.log(e)
-    })
-
-
-
-    }
    return <>
 
    <Box>
@@ -60,7 +48,7 @@ import { postToCart } from "../Redux/actions";
                             <b style={{marginTop:'20px'}}>{count}</b>
                         <Button width={10} height={10} mt={2} ml={5} rounded={'50%'} onClick={()=>handleIncrement(1)}> + </Button>
                     </Box>
-                  : <Button color={'white'} bg={'#24AEB1'} onClick={()=>handleButton(id)} mt={2} width={180}>ADD TO CART</Button> }
+                  : <Button color={'white'} bg={'#24AEB1'} onClick={()=> handleSave(mydata)} mt={2} width={180}>ADD TO CART</Button> }
             </Box>
    </>
  }
