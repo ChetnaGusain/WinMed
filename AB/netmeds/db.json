@@ -2849,7 +2849,16 @@
       "brand": "Revital",
       "salePrice": 263.5,
       "strikeOfPrice": 310,
-      "qty": 1
+      "qty": "2"
+    },
+    {
+      "id": 203,
+      "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/410717/vicco_turmeric_skin_cream_70_gm_0.jpg",
+      "title": "Vicco Turmeric Skin Cream 70 gm",
+      "seller": "Vicco Laboratories",
+      "brand": "Vicco",
+      "salePrice": 245,
+      "qty": "4"
     }
   ],
   "categoryInFocus": [
