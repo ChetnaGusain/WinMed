@@ -39,9 +39,9 @@ import { cartData } from "../Redux/actions";
           qty : mydata.prodData.qty
         }
         axios.post('http://localhost:3000/cart',finallyPost)
-        alert("Item Added to the Cart")
+        // alert("Item Added to the Cart")
         setFlag(true)
-
+        
         dispatch(cartData())
       }
 

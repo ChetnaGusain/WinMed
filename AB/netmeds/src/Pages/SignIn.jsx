@@ -2,10 +2,11 @@ import { Box,Button,Text } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { Avatar} from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import { logout } from '../Redux/actions';
+import { cartData, logout } from '../Redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar' ;
+import axios from 'axios';
 
 
 const SignIn = () => {

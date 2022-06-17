@@ -52,7 +52,7 @@ const ProductsByFilter = () => {
               <Box display={'flex'} justifyContent='space-between' mr={4} >
               <Text p={4}>Showing {length} items from 200</Text>
               <Box display={'flex'}> 
-              <Text  mt={'4'} >Sort By : </Text>
+              <Text  mt={'4'} >Sort By Price : </Text>
                 <Button  disabled={costOrder==="desc"} onClick={()=>setCostOrder("desc")}  size={'sm'} border={'1px solid blue '} rounded={'md'} mt={'4'} bg={'white'}  ml={4}>High To Low</Button>
                 <Button  disabled={costOrder==="asc"} onClick={()=>setCostOrder("asc")}  size={'sm'} border={'1px solid blue '} rounded={'md'} mt={'4'} bg={'white'}  ml={4}>Low To High</Button>
               </Box>

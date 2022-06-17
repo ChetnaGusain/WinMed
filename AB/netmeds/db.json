@@ -2842,23 +2842,23 @@
   ],
   "cart": [
     {
-      "id": 182,
-      "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/328123/revital_h_capsule_30_s_0.jpg",
-      "title": "Revital H Capsule 30'S",
-      "seller": "Mkt: Sun Pharmaceutical Industries Ltd",
-      "brand": "Revital",
-      "salePrice": 263.5,
-      "strikeOfPrice": 310,
-      "qty": "2"
+      "id": 187,
+      "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/409597/coq_300mg_softgel_15_s_0.jpg",
+      "title": "COQ 300mg Softgel 15'S",
+      "seller": "Mkt: Universal Nutriscience",
+      "brand": "COQ",
+      "salePrice": 1488.3,
+      "strikeOfPrice": 1815,
+      "qty": "1"
     },
     {
-      "id": 203,
+      "id": 110,
       "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/410717/vicco_turmeric_skin_cream_70_gm_0.jpg",
       "title": "Vicco Turmeric Skin Cream 70 gm",
       "seller": "Vicco Laboratories",
       "brand": "Vicco",
       "salePrice": 245,
-      "qty": "4"
+      "qty": "2"
     }
   ],
   "categoryInFocus": [

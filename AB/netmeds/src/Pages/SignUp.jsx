@@ -13,9 +13,9 @@ import {
     Text,
   } from '@chakra-ui/react';
   import { useNavigate } from "react-router-dom";
-import { useDispatch} from "react-redux";
-import { login } from "../Redux/actions";
-import Navbar from "../components/Navbar";
+  import { useDispatch} from "react-redux";
+  import { login } from "../Redux/actions";
+  import Navbar from "../components/Navbar";
 
 
   export default function SignUp() {
@@ -37,14 +37,12 @@ import Navbar from "../components/Navbar";
 
     const dispatch = useDispatch() ;
 
-   
-
     const handleOTP =()=>{
         setFlag(true)
     }
-
     console.log(email)
-    let customerData = {
+
+      let customerData = {
       email : email,
       firstName : name,
       lastName : lastName,
@@ -60,7 +58,7 @@ import Navbar from "../components/Navbar";
           
           localStorage.setItem("USERDATA",JSON.stringify(customerData))
           dispatch(login())
-          alert("Verification Successful...!!")
+          alert("SignUp Successful...!!")
           navigate('/')
 
         
@@ -71,7 +69,7 @@ import Navbar from "../components/Navbar";
   
       }
       else{
-        alert('Please fill Email Id')
+        alert('Please Fill Email Id')
       }
 
      

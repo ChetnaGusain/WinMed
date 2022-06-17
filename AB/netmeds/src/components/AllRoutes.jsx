@@ -22,7 +22,7 @@ const AllRoutes = () => {
     {/* <Link to='/wellness/covidEssentials'></Link> */}
     <Routes>
          <Route path='/' element={<Home></Home>} />
-         <Route path='/upload' element={<Upload></Upload>} />
+         <Route path='/' element={<Upload></Upload>} />
          <Route path='/signUp' element={<SignUp></SignUp>} />
          <Route path='/signIn' element={<SignIn></SignIn>} />
          <Route path='/wellness' element={<Wellness></Wellness>} />

@@ -12,9 +12,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { cartData } from '../Redux/actions'
 
-
-
-
 export const Nav = styled.div`
 height: 100px ;
 width: 100% ;
@@ -23,9 +20,9 @@ display: flex ;
 gap: 30px ;
 padding:10px ;
 padding-top:22px;
-${'' /* position:fixed;
-overflow:hidden;
-top:0; */}
+${'' /* position:fixed; */}
+${'' /* overflow:hidden; */}
+${'' /* top:0; */}
 `
 export const SearchDiv = styled.div`
 height:52px;
@@ -35,7 +32,6 @@ background: white ;
 padding-left:20px;
 padding-Top:3px;
 border-radius: 7px
-
 `
 
 const Navbar = () => {
@@ -79,7 +75,7 @@ const Navbar = () => {
               <Input variant='styled' width='330px' placeholder='Search for medicine & wellness products…' />
             </SearchDiv>
         
-          <Link to='/upload'> 
+          <Link to='/'> 
           <Box display={'flex'} color={'white'} pt={3}>
               <img src='https://www.netmeds.com/assets/gloryweb/images/icons/upload_rx.svg' alt=''/>
               <b>Upload</b>

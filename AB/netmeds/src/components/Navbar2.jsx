@@ -42,7 +42,7 @@ const Navbar2 = () => {
           </Box>
       
          <Link to='/wellness' style={{fontWeight:"500",paddingTop:"7px"}}>Wellness</Link>
-         <Link to='/labtest' style={{fontWeight:"500",paddingTop:"7px"}}>Lab Test</Link>
+         <Link to='/' style={{fontWeight:"500",paddingTop:"7px"}}>Lab Test</Link>
           <Box>
           <Menu >
                 {({ isOpen }) => (
@@ -95,9 +95,6 @@ const Navbar2 = () => {
           <Link to='/'>Sexual Wellness</Link>
           <Link to='/'>Treatements</Link>
         </Navv>
-
-
-
    </>
   )
 }
