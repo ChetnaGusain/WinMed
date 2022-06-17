@@ -1,5 +1,5 @@
 
-<image  height='300' width='500' style="margin:auto"  src='https://www.haptik.ai/hubfs/netmeds-seeklogo.com.png' />
+<image  height='300'  style="margin:auto"  src='https://www.haptik.ai/hubfs/netmeds-seeklogo.com.png' />
 
 # Project : Netmeds Clone
 
