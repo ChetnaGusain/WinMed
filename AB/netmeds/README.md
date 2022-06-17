@@ -1,70 +1,52 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<image src='https://www.haptik.ai/hubfs/netmeds-seeklogo.com.png' />
 
-## Available Scripts
+# Project : Netmeds Clone
 
-In the project directory, you can run:
+Netmeds.com, India Ki Pharmacy, is one of India’s most trusted pharmacies, with over 100 years’ experience in dispensing quality medicines.Netmeds.com,help you to look after your own health effortlessly as well as take care of loved ones wherever they may reside in India. You can buy and send medicines from any corner of the country - with just a few clicks of the mouse.
 
-### `npm start`
+Netmeds Clone is my first individual project in Masai, which I built in 5 days in my construct week.My main objective was to complete all the main functionality of this Pharmacitical E-commerce website starting with Sign-up to till the buying a products from the website.I used React.js, React-Redux, JavaScripts,HTML,CSS & Chakra UI for building the pages.
+And I used JSON server for the database. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To see the preview of the Project,first run the localhost in your system & then - [Click here](https://netmeds-clone-project-masai.netlify.app/) 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Credits
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- For Images : [netmeds.com](https://www.netmeds.com/)
+- For Content : [netmeds.com](https://www.netmeds.com/)
+- For Icons : [Chakra-ui Icons](https://chakra-ui.com/docs/components/media-and-icons/icon/)
+- For References : [Chakra UI](https://chakra-ui.com/) | [MDN Docs](https://developer.mozilla.org/en-US/) | [W3School](https://www.w3schools.com/)
 
-### `npm run build`
+## Tech Stack Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React.js
+- Javascript
+- Chakra UI
+- HTML
+- CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+- Sign-in/Sign-up Authentication
+- You can see variety of products of different categories using sliders 
+- Built the wellness page with all cateogories products which has the filter, search, sort functionality.
+- Add to cart option is there in all pages.
+- Built the cart page with Digital Payment options like phonePay.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Presentation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+For the project presentation video -  [Click here](https://drive.google.com/file/d/1SJ2vAbp8Z-X70ix6CTHtWXlXsaNLfekV/view?usp=sharing)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Authors
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Abhishek Bhosale](https://github.com/abhishekbhosale1025)
 
-### Code Splitting
+#### Thank You [Masai School](https://www.masaischool.com/ "home") ...!!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
