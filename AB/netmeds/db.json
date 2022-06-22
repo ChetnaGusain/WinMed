@@ -2842,23 +2842,24 @@
   ],
   "cart": [
     {
-      "id": 187,
-      "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/409597/coq_300mg_softgel_15_s_0.jpg",
-      "title": "COQ 300mg Softgel 15'S",
-      "seller": "Mkt: Universal Nutriscience",
-      "brand": "COQ",
-      "salePrice": 1488.3,
-      "strikeOfPrice": 1815,
-      "qty": "1"
+      "id": 4,
+      "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/15114/dettol_antiseptic_liquid_60_ml_0_1.jpg",
+      "title": "Dettol Antiseptic 60 ml",
+      "seller": "Reckitt Benckiser India Ltd",
+      "brand": "Dettol",
+      "salePrice": 33.27,
+      "strikeOfPrice": 50,
+      "qty": "6"
     },
     {
-      "id": 110,
-      "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/410717/vicco_turmeric_skin_cream_70_gm_0.jpg",
-      "title": "Vicco Turmeric Skin Cream 70 gm",
-      "seller": "Vicco Laboratories",
-      "brand": "Vicco",
-      "salePrice": 245,
-      "qty": "2"
+      "id": 141,
+      "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/15917/dabur_pudin_hara_pearls_capsule_10_s_0.jpg",
+      "title": "Dabur Pudin Hara Pearls Capsule 10's",
+      "seller": "Mkt: Dabur India Ltd",
+      "brand": "Dabur",
+      "salePrice": 19,
+      "strikeOfPrice": 20,
+      "qty": "4"
     }
   ],
   "categoryInFocus": [

@@ -78,9 +78,6 @@ const Cart = () => {
       console.log(e)
     })
   }
-
-  
-
   return (
     <>
         <Navbar/>

@@ -1,10 +1,6 @@
 import axios from "axios"
 import {  BESTSELLER_SUCCESS, CART_SUCCESS, COVIDESSENTIALS_SUCCESS, FETCHFILTERDATA, LOGIN_SUCCESS, LOGOUT_SUCCESS,NEWONNETMEDS_SUCCESS,SUPP_SUCCESS, } from "./actionTypes"
 
-
-
-
-
 export const login =()=>({
     type: LOGIN_SUCCESS,
 })
@@ -12,9 +8,7 @@ export const login =()=>({
 export const logout =()=>({
     type: LOGOUT_SUCCESS,
     payload:null 
- 
 })
-
 
 export const suppSuccess =(data)=>({
     type: SUPP_SUCCESS,
@@ -45,11 +39,6 @@ export const takeMeToCart=(data)=>({
     type: CART_SUCCESS,
     payload:data
 })
-
-
-
-
-
 
 // FETCH FUNCTIONS
 

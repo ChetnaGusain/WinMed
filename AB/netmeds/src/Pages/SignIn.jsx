@@ -38,9 +38,7 @@ const SignIn = () => {
 
       <>
           <Navbar/>
-     
-
-     <Box bg={'#151B390F'} width='100%' height='auto'>
+          <Box bg={'#151B390F'} width='100%' height='auto'>
 
           
           <Text pl={175} pt={5} pb={3} fontSize='28px' fontWeight={600}>Your Account</Text>
