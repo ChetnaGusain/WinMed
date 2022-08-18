@@ -1,65 +1,56 @@
-
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import { postToCart } from '../Redux/actions';
-
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
+import { postToCart } from "../Redux/actions";
 
 const ProductPage = (id) => {
-    const [data,setData] = useState(null) ;
+  const [data, setData] = useState(null);
 
-    // const [cartData,setCartData] = useState("")
-    // const dispatch = useDispatch()
-    // // console.log(cartData)
-    const params = useParams() ;
-    console.log(id)
+  // const [cartData,setCartData] = useState("")
+  // const dispatch = useDispatch()
+  // // console.log(cartData)
+  const params = useParams();
+  console.log(id);
 
-    
-    useEffect(()=>{
-        const user_id= params.id ;
-        console.log(user_id)
-    
-        axios({
-            url: `  http://localhost:3000/data/${user_id}`,
-            method: 'GET',
-        })
-        .then(res=>{
-            setData(res.data)
-            console.log(data)
-        })
-        .catch(e=>{
-            console.log(e)
-        })
+  useEffect(() => {
+    const user_id = params.id;
+    console.log(user_id);
 
-        axios.post('http://localhost:3000/cart',data)
-        .then((res)=>{
-            alert('post success')
-        })
-        .catch((e)=>{
-            alert('post failed')
-            console.log(e)
-        })
-       
-    },[params.user_id]
-    )
+    axios({
+      url: `https://netmeds-server-data.herokuapp.com/api/data/${user_id}`,
+      method: "GET",
+    })
+      .then((res) => {
+        setData(res.data);
+        console.log(data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
 
-  
+    axios
+      .post("https://netmeds-server-data.herokuapp.com/api/cart", data)
+      .then((res) => {
+        alert("post success");
+      })
+      .catch((e) => {
+        alert("post failed");
+        console.log(e);
+      });
+  }, [params.user_id]);
 
-//     const handleSave=(data)=>{
+  //     const handleSave=(data)=>{
 
-//     console.log(data)
-  
+  //     console.log(data)
 
-// }
+  // }
 
-// handleSave(data)
-       
+  // handleSave(data)
 
-   
   return (
-      <>
-    {/* <center><h2>{data?.name}</h2>
+    <>
+      {/* <center><h2>{data?.name}</h2>
     <div>
       
 
@@ -78,7 +69,7 @@ const ProductPage = (id) => {
     </center> 
      */}
     </>
-  )
-}
+  );
+};
 
-export default ProductPage
+export default ProductPage;

@@ -2842,24 +2842,14 @@
   ],
   "cart": [
     {
-      "id": 4,
-      "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/15114/dettol_antiseptic_liquid_60_ml_0_1.jpg",
-      "title": "Dettol Antiseptic 60 ml",
-      "seller": "Reckitt Benckiser India Ltd",
-      "brand": "Dettol",
-      "salePrice": 33.27,
-      "strikeOfPrice": 50,
-      "qty": "6"
-    },
-    {
-      "id": 141,
-      "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/15917/dabur_pudin_hara_pearls_capsule_10_s_0.jpg",
-      "title": "Dabur Pudin Hara Pearls Capsule 10's",
-      "seller": "Mkt: Dabur India Ltd",
-      "brand": "Dabur",
-      "salePrice": 19,
-      "strikeOfPrice": 20,
-      "qty": "4"
+      "id": 118,
+      "imageUrl": "https://www.netmeds.com/images/product-v1/150x150/13603/nivea_soft_light_moisturiser_25_ml_0.jpg",
+      "title": "Nivea Soft Light Moisturiser 25 ml",
+      "seller": "Nivea India",
+      "brand": "Nivea",
+      "salePrice": 42.75,
+      "strikeOfPrice": 45,
+      "qty": "2"
     }
   ],
   "categoryInFocus": [
